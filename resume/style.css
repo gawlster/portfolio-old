@@ -17,6 +17,15 @@
     top:0;
 }
 
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    display:none;              /*         Chrome        */
+    scrollbar-width: none;     /*        Firefox        */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+
 html {
     margin:0;
     padding:0;

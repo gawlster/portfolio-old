@@ -4,17 +4,28 @@
     height:100vh;
     width:100%;
     position:fixed;
-    z-index:100;
+    z-index:999;
     opacity:1;
 }
 #preloader-outer {
     opacity:1;
     background:#000;
     height:100vh;
-    width:100%;
+    width:110%;
     position:fixed;
-    z-index:99;
+    z-index:998;
 }
+
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    display:none;              /*         Chrome        */
+    scrollbar-width: none;     /*        Firefox        */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+
+
 
 
 
@@ -104,6 +115,11 @@ body {
     height:100%;
     background-image:url('images/beach-background.png');
     background-repeat:no-repeat;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 #home .home-content {
     margin-top:15%;
@@ -308,26 +324,34 @@ body {
     box-shadow:-5px 10px 7px #292929;
 }
 
-#projects .projects-content > a { /*only selects the other-projects a tag*/
+#projects .projects-content .other-projects-div > a { /*only selects the other-projects a tag*/
     text-decoration:none;
+    margin:auto;
+    color:lightgrey;
 }
-#projects .projects-content .other-projects {
+#projects .projects-content .other-projects-div {
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
     transition:all .3s ease-in-out;
     margin:auto;
     margin-top:20px;
     margin-bottom:20px;
-    width:40%;
+    width:60%;
     color:lightgrey;
 }
 #projects .projects-content .other-projects:hover {
     transform:scale(1.05);
+}
+#projects .projects-content .other-projects {
+    width:100%;
 }
 #projects .projects-content .other-projects .other-text {
     border-radius:10px 10px 10px 10px;
     box-shadow:-5px 10px 7px #292929;
     
     background-color:#444444;
-    width:60%;
+    width:100%;
     height:50px;
     padding-top:8px;
     padding-bottom:10px;
@@ -336,6 +360,9 @@ body {
     text-align:center;
     
     margin-top:70px;
+}
+#projects .projects-content .other-projects .other-text:hover {
+    background-color:#555555;
 }
 
 #projects .text p.title {
