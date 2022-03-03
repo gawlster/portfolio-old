@@ -121,20 +121,22 @@ body {
     grid-template-columns:50% 50%;
 }
 #home .home-content .name .first-name {
-    display:inline;
+    display:flex;
     font-weight:lighter;
     text-align:right;
     margin-right:5px;
     grid-column-start:1;
     grid-column-end:2;
+    justify-content:flex-end;
 }
 #home .home-content .name .last-name {
-    display:inline;
+    display:flex;
     font-weight:bold;
     text-align:left;
     margin-left:5px;
     grid-column-start:2;
     grid-column-end:3;
+    justify-content:flex-start;
 }
 #home .home-content .position-title {
     font-size:30px;
@@ -238,7 +240,7 @@ body {
 }
 #projects .text {
     background-color:#444444;
-    width:60%;
+    width:70%;
     height:60%;
     padding-top:10px;
     padding-bottom:10px;
@@ -253,7 +255,7 @@ body {
     flex-direction:row;
     justify-content:center;
     align-items: center;
-    width:70%;
+    width:90%;
     margin:auto;
     margin-top:20px;
     margin-bottom:20px;
@@ -267,7 +269,7 @@ body {
     flex-direction:row;
     justify-content:center;
     align-items: center;
-    width:70%;
+    width:90%;
     margin:auto;
     margin-top:20px;
     margin-bottom:20px;
@@ -282,7 +284,7 @@ body {
     justify-content:center;
     align-items: center;
     margin:10px;
-    width:70%;
+    width:90%;
     margin:auto;
     margin-top:20px;
     margin-bottom:20px;
@@ -299,7 +301,7 @@ body {
     margin:auto;
     margin-top:20px;
     margin-bottom:20px;
-    width:70%;
+    width:90%;
 }
 #projects .projects-content .shooter .text {
     border-radius:10px 0 0 10px;
