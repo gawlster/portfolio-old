@@ -20,6 +20,10 @@ body {
     width:100%;
     position:fixed;
     top:0;
+    z-index:100; /*this is just so it doesnt get covered for resized hover images*/
+}
+#navbar p {
+    display:inline;
 }
 #home .navbar a {
     margin-left:35px;
@@ -44,7 +48,7 @@ body {
     grid-template-columns:30% 40% 30%;
     width:100%;
     height:100%;
-    background-image:url('beach-background.png');
+    background-image:url('images/beach-background.png');
     background-repeat:no-repeat;
 }
 #home .home-content {
@@ -129,8 +133,100 @@ body {
     display:grid;
     grid-template-rows:100%;
 }
+#projects .projects-content {
+    padding-left: 20%;
+    padding-right:20%;
+    padding-top:7%;
+    padding-bottom:7%;
+}
+#projects .thumbnail {
+    width:300px;
+    border:1px solid lightgrey;
+    border-radius:10px;
+}
+#projects .thumbnail img {
+    border-radius:10px;
+    width:100%;
+}
+#projects .thumbnail img {
+    transition:all .3s ease-in-out;
+}
+#projects .thumbnail img:hover {
+    transform:scale(1.2);
+}
+#projects .text {
+    border:1px solid lightgrey;
+    border-radius:10px;
+    width:60%;
+    height:60%;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    text-align:center;
+}
+
+#projects .projects-content .website {
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    margin:10px;
+    width:70%;
+}
+#projects .projects-content .calendar-c {
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    margin:10px;
+    width:70%;
+}
+#projects .projects-content .calendar-python {
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    margin:10px;
+    width:70%;
+}
+#projects .projects-content .shooter {
+    display: flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    margin:10px;
+    width:70%;
+}
+
+#projects .text p.title {
+    font-size:30px;
+    font-weight:bold;
+}
 
 #contact {
     display:grid;
     grid-template-rows:100%;
+}
+#contact .contact-content {
+    padding-left: 20%;
+    padding-right:20%;
+    padding-top:7%;
+    padding-bottom:7%;
+}
+#contact .contact-content input {
+    display:block;
+    margin-top:5px;
+    margin-bottom:5px;
+    border-radius:3px;
+}
+#contact .contact-content textarea {
+    border-radius:3px;
+    margin-bottom:10px;
+}
+#message-full {
+    display:block;
+}
+#message-compact {
+    display:none;
 }
