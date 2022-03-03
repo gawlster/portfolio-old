@@ -1,3 +1,23 @@
+#preloader {
+    background:#000 url("images/preloader.gif") no-repeat center;
+    background-size:30%;
+    height:100vh;
+    width:100%;
+    position:fixed;
+    z-index:100;
+    opacity:1;
+}
+#preloader-outer {
+    opacity:1;
+    background:#000;
+    height:100vh;
+    width:100%;
+    position:fixed;
+    z-index:99;
+}
+
+
+
 html {
     scroll-behavior: smooth;
     padding:0;
@@ -8,6 +28,14 @@ body {
     font-family: 'Lato', sans-serif;
     background-color:#333333;
     color:lightgrey;
+}
+.hr {
+  background: rgba(0, 0, 0, 0.6);
+  height: 1px;
+  width: 50%;
+  margin:auto;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 }
 
 /*NAVBAR RULES*/
@@ -20,10 +48,7 @@ body {
     width:100%;
     position:fixed;
     top:0;
-    z-index:100; /*this is just so it doesnt get covered for resized hover images*/
-}
-#navbar p {
-    display:inline;
+    z-index:90; /*this is just so it doesnt get covered for resized hover images*/
 }
 #home .navbar a {
     margin-left:35px;
@@ -35,7 +60,36 @@ body {
 #home .navbar a:hover {
     color:lightgray;
     text-decoration:underline;
-    transform:scale(2); /*NOT WORKING AT THE MOMENT NEEDS ATTENTION*/
+}
+.resume {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:center;
+    width:100px;
+    position:fixed;
+    top:8px;
+    right:20px;
+    z-index:90; /*this is just so it doesnt get covered for resized hover images*/
+}
+.resume a {
+    margin-left:35px;
+    margin-right:35px;
+    transition:all .3s ease-in-out;
+    color:white;
+    text-decoration:none;
+}
+.resume a:hover {
+    color:lightgray;
+    text-decoration:underline;
+}
+.resume #resume-link {
+    padding:5px;
+    border: 2px;
+    border-width:2px;
+    border-color:lightgrey;
+    border-style:solid;
+    border-radius:10px;
 }
 
 
@@ -114,6 +168,14 @@ body {
 #home .home-content .socials a:hover {
     transform:scale(1.1);
 }
+#home .image-credit {
+    font-family: 'Lato', sans-serif;
+    font-size:10px;
+    color:white;
+    position:absolute;
+    bottom:0;
+    left:3px;
+}
 
 
 
@@ -125,23 +187,29 @@ body {
 #about .about-content {
     padding-left:20%;
     padding-right:20%;
-    padding-top:7%;
-    padding-bottom:7%;
+    padding-top:4%;
+    padding-bottom:4%;
 }
-
+#about .intro-header {
+    color:white;
+    text-shadow:0px 3px 9px rgba(0, 0, 0, 0.9);
+}
 #projects {
     display:grid;
     grid-template-rows:100%;
 }
+#projects .projects-header {
+    color:white;
+    text-shadow:0px 3px 9px rgba(0, 0, 0, 0.9);
+}
 #projects .projects-content {
     padding-left: 20%;
     padding-right:20%;
-    padding-top:7%;
-    padding-bottom:7%;
+    padding-top:4%;
+    padding-bottom:4%;
 }
 #projects .thumbnail {
-    width:300px;
-    border:1px solid lightgrey;
+    width:250px;
     border-radius:10px;
 }
 #projects .thumbnail img {
@@ -150,13 +218,26 @@ body {
 }
 #projects .thumbnail img {
     transition:all .3s ease-in-out;
+    /*grayscale effect*/
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */    
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%) brightness(60%);
+    filter: gray; /* IE 6-9 */
+    z-index:20;
 }
 #projects .thumbnail img:hover {
-    transform:scale(1.2);
+    transform:scale(1.05);
+    /*make it colored when hovering*/
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    filter: none;
+    z-index:50; /*makes sure its at the top except the navbar*/
 }
 #projects .text {
-    border:1px solid lightgrey;
-    border-radius:10px;
+    background-color:#444444;
     width:60%;
     height:60%;
     padding-top:10px;
@@ -164,6 +245,7 @@ body {
     padding-left:20px;
     padding-right:20px;
     text-align:center;
+    box-shadow:5px 10px;
 }
 
 #projects .projects-content .website {
@@ -171,16 +253,28 @@ body {
     flex-direction:row;
     justify-content:center;
     align-items: center;
-    margin:10px;
     width:70%;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#projects .projects-content .website .text {
+    border-radius:10px 0 0 10px;
+    box-shadow:-5px 10px 7px #292929;
 }
 #projects .projects-content .calendar-c {
     display: flex;
     flex-direction:row;
     justify-content:center;
     align-items: center;
-    margin:10px;
     width:70%;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#projects .projects-content .calendar-c .text {
+    border-radius: 0 10px 10px 0;
+    box-shadow:5px 10px 7px #292929;
 }
 #projects .projects-content .calendar-python {
     display: flex;
@@ -189,14 +283,57 @@ body {
     align-items: center;
     margin:10px;
     width:70%;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+#projects .projects-content .calendar-python .text {
+    border-radius:0 10px 10px 0;
+    box-shadow:5px 10px 7px #292929;
 }
 #projects .projects-content .shooter {
     display: flex;
     flex-direction:row;
     justify-content:center;
     align-items: center;
-    margin:10px;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
     width:70%;
+}
+#projects .projects-content .shooter .text {
+    border-radius:10px 0 0 10px;
+    box-shadow:-5px 10px 7px #292929;
+}
+
+#projects .projects-content > a { /*only selects the other-projects a tag*/
+    text-decoration:none;
+}
+#projects .projects-content .other-projects {
+    transition:all .3s ease-in-out;
+    margin:auto;
+    margin-top:20px;
+    margin-bottom:20px;
+    width:40%;
+    color:lightgrey;
+}
+#projects .projects-content .other-projects:hover {
+    transform:scale(1.05);
+}
+#projects .projects-content .other-projects .other-text {
+    border-radius:10px 10px 10px 10px;
+    box-shadow:-5px 10px 7px #292929;
+    
+    background-color:#444444;
+    width:60%;
+    height:50px;
+    padding-top:8px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    text-align:center;
+    
+    margin-top:70px;
 }
 
 #projects .text p.title {
@@ -208,25 +345,102 @@ body {
     display:grid;
     grid-template-rows:100%;
 }
+#contact .contact-header {
+    color:white;
+    text-shadow:0px 3px 9px rgba(0, 0, 0, 0.9);
+}
 #contact .contact-content {
     padding-left: 20%;
     padding-right:20%;
-    padding-top:7%;
-    padding-bottom:7%;
+    padding-top:4%;
+    padding-bottom:4%;
 }
 #contact .contact-content input {
     display:block;
     margin-top:5px;
     margin-bottom:5px;
     border-radius:3px;
+    background-color:#444444;
+    color:lightgrey;
+    border:1px inset #222222;
+    font-size:16px;
+    padding:6px;
 }
 #contact .contact-content textarea {
     border-radius:3px;
+    margin-top:5px;
     margin-bottom:10px;
+    background-color:#444444;
+    color:lightgrey;
+    border:1px inset #222222;
+    font-size:16px;
+    padding:8px;
+    font-family:'Lato', sans-serif;
+}
+#contact .contact-content button {
+    background-color:#555555;
+    color:lightgrey;
+    width:70px;
+    height:30px;
 }
 #message-full {
     display:block;
 }
 #message-compact {
     display:none;
+}
+
+
+.resize-warning {
+    background-image:url('images/beach-background.png');
+    background-repeat:no-repeat;    
+    background-position:0 0;
+    width:100%;
+    height:100%;
+    display:none;
+}
+.resize-warning .resize-content {
+    color:white;
+    text-align:center;
+    text-shadow:0px 3px 9px rgba(0, 0, 0, 0.9);
+    border:2px solid #111111;
+    border-radius:10px;
+    margin:17px;
+    padding:8px;
+    height:100%;
+    grid-row:2;
+}
+.resize-warning .resize-content a {
+    text-decoration-color:royalblue;
+    color:royalblue;
+}
+
+
+
+@media screen and (max-width:830px) {
+    body {
+        overflow:hidden;
+    }
+    .navbar {
+        display:hidden;
+    }
+    .resize-warning {
+        display:grid;
+        grid-template-rows: 33% 25% 42%
+    }
+    .hr {
+        display:none;
+    }
+    #home {
+        display:none;
+    }
+    #about {
+        display:none;
+    }
+    #projects {
+        display:none;
+    }
+    #contact {
+        display:none;
+    }
 }

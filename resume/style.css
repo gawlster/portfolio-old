@@ -1,0 +1,156 @@
+body {
+    background-image:url('beach-background.png');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+.image-credit {
+    font-family: 'Lato', sans-serif;
+    font-size:10px;
+    color:white;
+    position:relative;
+    bottom:0;
+    left:0;
+}
+.resume {
+    background-color:white;
+    width:900px;
+    margin:0 auto;
+    border:1px solid lightgrey;
+    padding:15px;
+    border-radius:15px;
+    display:grid;
+    grid-template-columns:35% 65%;
+    font-family: 'Lato', sans-serif;
+}
+.header {
+    margin-bottom:17px;
+    font-weight:bolder;
+    letter-spacing:3px;
+}
+
+.resume-left {
+    margin:3%;
+    grid-column:1;
+}
+.resume-right {
+    margin:3%;
+    grid-column:2;
+}
+.resume-left .info {
+    display:flex;
+    flex-flow: column nowrap;
+    margin-bottom:20px;
+}
+.resume-left .info #first-name {
+    text-align:center;
+    margin-top:20%;
+    margin-bottom:0px;
+    font-weight:lighter;
+}
+.resume-left .info #last-name {
+    text-align:center;
+    margin-top:6px;
+    margin-bottom:0px;
+}
+.resume-left .info #position-title {
+    text-align:center;
+    margin-bottom:0px;
+    font-weight:normal;
+}
+.resume-left .statement {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.resume-left .statement #statement-content {
+    text-align:center;
+}
+.resume-left .skills {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.resume-left .skills .details {
+    font-style:oblique;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:7px;
+}
+.resume-left .skills .bar {
+    position:relative;
+    border:1px solid grey;
+    border-radius:20px;
+    margin-bottom:10px;
+}
+.resume-left .skills .bar div {
+    position:relative;
+    height:7px;
+    border-radius:9px;
+    background-color:rgb(95, 95, 95);
+}
+.resume-left .contact {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.resume-left .contact .icon {
+    display:inline;
+    margin-right:15px;
+}
+.resume-left .contact p {
+    display:inline;
+}
+.resume-left .contact .phone {
+    margin-bottom:8px;
+}
+.resume-left .contact .email {
+    margin-bottom:8px;
+}
+.resume-left .contact .linkedin {
+    margin-bottom:8px;
+}
+
+
+
+.resume-right .education {
+    margin-bottom:17px;
+}
+.resume-right .education p {
+    margin-top:2px;
+    margin-bottom:2px;
+}
+.resume-right .education .uni .school-year {
+    margin-bottom:20px;
+}
+.resume-right .education .degree {
+    font-weight:bold;
+}
+.resume-right .education .school-year {
+    font-style:oblique;
+}
+.resume-right .projects .project-title {
+    font-weight:bold;
+    margin-bottom:0px;
+}
+.resume-right .projects .project-info {
+    margin-top:4px;
+    margin-bottom:0px;
+}
+.resume-right .projects .project-code {
+    margin-top:4px;
+}
+.resume-right .projects .project-code a {
+    color:black;
+    margin-right:10px;
+    text-decoration:none;
+}
+.resume-right .projects .project-code i {
+    color:black;
+    display:inline;
+}
+.resume-right .projects .project-code p {
+    color:black;
+    display:inline;
+    font-style:oblique;
+}
+.resume-right .projects ul {
+    margin-bottom:20px;
+}

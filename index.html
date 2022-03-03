@@ -8,21 +8,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="icon" href="favicon.ico"> <!--tab icon-->
+        <link rel="icon" href="images/favicon.ico"> <!--tab icon-->
     </head>
 
-    <body style="overflow-x:hidden"> <!--no horizontal scroll-->
-        <!--navbar visible in all sections at the top of the screen       
-        <div class="navbar">
-            <ul style="list-style:none">
-                <a href="#home" target="_self">HOME</a>
-                <a href="#about" target="_self">ABOUT</a>
-                <a href="#projects" target="_self">PROJECTS</a>
-                <a href="#contact" target="_self">PROJECTS</a>
-            </ul>
-        </div>
-    -->
+    <body style="overflow-x:hidden" onload="loaded()"> <!--no horizontal scroll-->
         
+        <div id="preloader-outer">
+            <div id="preloader"></div>
+        </div>
         
 <!------------------------------------------------------------------------------------------------------------------------>        
         <div id="home">
@@ -35,6 +28,13 @@
                     <a href="#projects" target="_self">PROJECTS</a>
                     <a href="#contact" target="_self">CONTACT</a>
                 </ul>
+            </div>
+            <div class="resume">
+                <a href="resume/index.html" target="_blank" id="resume-link">RESUME</a>
+            </div>
+            
+            <div class="image-credit">
+                <p>Image courtesy of StoryBlock.com</p>
             </div>
 
             <!--top of the screen the user sees when they open the page-->
@@ -97,7 +97,7 @@
         </div>
 <!------------------------------------------------------------------------------------------------------------------------>        
         
-
+<span class="hr"></span>
 
 <!------------------------------------------------------------------------------------------------------------------------>        
         <div id="projects">
@@ -121,34 +121,19 @@
                         </a>
                     </div>
                 </div>
-                <div class="calendar-c">
-                    <div class="text">
-                        <p class="title">
-                            C Calender Interpreter
-                        </p>
-                        <p class="description">
-                            A program written in C which reads and interprets a formatted calendar XML File and finds all events within a given timeframe.
-                        </p>
-                    </div>
-                    <div class="thumbnail">
-                        <a href="https://github.com/gawlster/calendar-interpreter" target="_blank">
-                            <img src="images/c-calendar-thumbnail.jpg">
-                        </a>
-                    </div>
-                </div>
                 <div class="calendar-python">
-                    <div class="text">
-                        <p class="title">
-                            Python Calendar Interpreter
-                        </p>
-                        <p class="description">
-                            A program written in Python which reads and interprets a formatted calendar XML File, a 'Circuits' XML File and a 'Broadcasters' XML File, and displays detailed information about each event within a given timeframe.
-                        </p>
-                    </div>
                     <div class="thumbnail">
                         <a href="https://github.com/gawlster/" target="_blank">
                             <img src="images/c-calendar-thumbnail.jpg">
                         </a>
+                    </div>
+                    <div class="text">
+                        <p class="title">
+                            Python Event Interpreter
+                        </p>
+                        <p class="description">
+                            A program written in Python which reads and interprets a formatted 'Events' XML File, a 'Circuits' XML File and a 'Broadcasters' XML File, and displays detailed information about each event within a given timeframe.
+                        </p>
                     </div>
                 </div>
                 <div class="shooter">
@@ -166,17 +151,42 @@
                         </a>
                     </div>
                 </div>
+                <div class="calendar-c">
+                    <div class="thumbnail">
+                        <a href="https://github.com/gawlster/calendar-interpreter" target="_blank">
+                            <img src="images/c-calendar-thumbnail.jpg">
+                        </a>
+                    </div>
+                    <div class="text">
+                        <p class="title">
+                            C Calender Interpreter
+                        </p>
+                        <p class="description">
+                            A program written in C which reads and interprets a formatted calendar XML File and finds all events within a given timeframe.
+                        </p>
+                    </div>
+                    
+                </div>
+                <a href="https://github.com/gawlster?tab=repositories" target="_blank">
+                    <div class="other-projects">
+                        <div class="other-text">
+                            <p class="description">
+                                View more of my projects
+                            </p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
 <!------------------------------------------------------------------------------------------------------------------------>
 
-
+<span class="hr"></span>
 
 <!------------------------------------------------------------------------------------------------------------------------>
         <div id="contact">
             <!--contact section, directly under the projects section-->
             <div class="contact-content">
-                <h1 class="conact-header">
+                <h1 class="contact-header">
                     Get in touch!
                 </h1>
                 <p class="contact-description">
@@ -196,13 +206,23 @@
                     <textarea id="message-full" name="message_full" cols="50" rows="8"></textarea>
                     <textarea id="message-compact" name="message_compact" cols="40" rows="8"></textarea>
                     
-                    <button onclick="contactFormSubmit()">Submit</button>
+                    <button onclick="contactFormSubmit()">Send</button>
                     
                     <input type="hidden" name="_next" value="https://google.com/thank-you-page">
                 </form>
             </div>
         </div>
 <!------------------------------------------------------------------------------------------------------------------------>
+
+
+        <div class="resize-warning">
+            <div class="resize-content">
+                <h2>Sorry! Support for screens smaller than 830 pixels in width isn't ready yet!</h2>
+                <p>Please use a larger screen if possible. If not, I can be reached by email at connorgawley@uvic.ca.</p>
+                <p>In the meantime, why not check out <a href="resume/index.html" target="_blank">my resume</a> at this link. Thank you for your patience.</p>
+            </div>
+        </div>
+
 
     </body>
 
