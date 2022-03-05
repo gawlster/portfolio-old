@@ -26,13 +26,16 @@
 
 
 
-
+.invisible {
+    opacity:0;
+}
 
 
 html {
     scroll-behavior: smooth;
     padding:0;
     margin:0;
+    transition:opacity .3s ease-in-out;
 }
 body {
     margin:0;
@@ -50,8 +53,54 @@ body {
 }
 
 /*NAVBAR RULES*/
+#home .navbar .homeLink {
+    display:inline;
+    border-radius:10px;
+    margin-left:35px;
+    margin-right:35px;
+    transition:all .3s ease-in-out;
+    padding:5px;
+}
+#home .navbar .aboutLink {
+    display:inline;
+    border-radius:10px;
+    margin-left:35px;
+    margin-right:35px;
+    transition:all .3s ease-in-out;
+    padding:5px;
+}
+#home .navbar .projectsLink {
+    display:inline;
+    border-radius:10px;
+    margin-left:35px;
+    margin-right:35px;
+    transition:all .3s ease-in-out;
+    padding:5px;
+}
+#home .navbar .contactLink {
+    display:inline;
+    border-radius:10px;
+    margin-left:35px;
+    margin-right:35px;
+    transition:all .3s ease-in-out;
+    padding:5px;
+}
+
+#home .navbar .homeLink:hover {
+    background-color:rgba(75, 75, 75, 0.5);
+}
+#home .navbar .aboutLink:hover {
+    background-color:rgba(75, 75, 75, 0.5);
+}
+#home .navbar .projectsLink:hover {
+    background-color:rgba(75, 75, 75, 0.5);
+}
+#home .navbar .contactLink:hover {
+    background-color:rgba(75, 75, 75, 0.5);
+}
+
 #home .navbar {
-    background-color:rgba(128, 128, 128, 0.589);
+    background-color:rgba(128, 128, 128, 0.590);
     display:flex;
     flex-direction:row;
     flex-wrap:nowrap;
@@ -60,18 +109,15 @@ body {
     position:fixed;
     top:0;
     z-index:90; /*this is just so it doesnt get covered for resized hover images*/
+    transition:background-color 400ms ease-in-out;
 }
 #home .navbar a {
-    margin-left:35px;
-    margin-right:35px;
+    margin:5px;
     transition:all .3s ease-in-out;
     color:white;
     text-decoration:none;
 }
-#home .navbar a:hover {
-    color:lightgray;
-    text-decoration:underline;
-}
+
 .resume {
     display:flex;
     flex-direction:row;
@@ -79,20 +125,14 @@ body {
     justify-content:center;
     width:100px;
     position:fixed;
-    top:8px;
+    top:3px;
     right:20px;
+    margin-top:8px;
     z-index:90; /*this is just so it doesnt get covered for resized hover images*/
 }
 .resume a {
-    margin-left:35px;
-    margin-right:35px;
-    transition:all .3s ease-in-out;
     color:white;
     text-decoration:none;
-}
-.resume a:hover {
-    color:lightgray;
-    text-decoration:underline;
 }
 .resume #resume-link {
     padding:5px;
@@ -101,6 +141,20 @@ body {
     border-color:lightgrey;
     border-style:solid;
     border-radius:10px;
+}
+.resume .resumeLink {
+    display:inline;
+    border-radius:10px;
+    margin-left:35px;
+    margin-right:35px;
+    transition:all .3s ease-in-out;
+    top:8px;
+    right:20px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.resume .resumeLink:hover {
+    background-color:rgba(75, 75, 75, 0.5);
 }
 
 
@@ -212,6 +266,9 @@ body {
     color:white;
     text-shadow:0px 3px 9px rgba(0, 0, 0, 0.9);
 }
+#about li {
+    margin-bottom:20px;
+}
 #projects {
     display:grid;
     grid-template-rows:100%;
@@ -244,6 +301,7 @@ body {
     filter: grayscale(100%) brightness(60%);
     filter: gray; /* IE 6-9 */
     z-index:20;
+    z-index:70;
 }
 #projects .thumbnail img:hover {
     transform:scale(1.05);
@@ -264,6 +322,7 @@ body {
     padding-right:20px;
     text-align:center;
     box-shadow:5px 10px;
+    z-index:-5;
 }
 
 #projects .projects-content .website {
@@ -345,6 +404,7 @@ body {
 }
 #projects .projects-content .other-projects {
     width:100%;
+    transition:all .3s ease-in-out;
 }
 #projects .projects-content .other-projects .other-text {
     border-radius:10px 10px 10px 10px;
@@ -369,6 +429,14 @@ body {
     font-size:30px;
     font-weight:bold;
 }
+.right {
+    transform:translateX(-2%);
+}
+.left {
+    transform:translateX(2%);
+}
+
+
 
 #contact {
     display:grid;
@@ -472,4 +540,41 @@ body {
     #contact {
         display:none;
     }
+}
+
+
+
+.fade-in {
+    opacity:0;
+    transition:opacity 550ms ease-in-out;
+}
+.fade-in.appear {
+    opacity:1;
+}
+
+
+.from-left {
+    transform:translateX(-2%);
+}
+.from-right {
+    transform:translateX(2%);
+}
+.from-left, .from-right {
+    transition:opacity 550ms ease-in-out, transform 700ms ease-in-out;
+    opacity:0;
+}
+.from-left.appear, .from-right.appear {
+    transform:translateX(0);
+    opacity:1;
+}
+
+
+.fall-in {
+    transform:translateY(2%);
+    transition:opacity 550ms ease-in-out, tranform 700ms ease-in-out;
+    opacity:0;
+}
+.fall-in.appear {
+    transform:translateY(0);
+    opacity:1;
 }

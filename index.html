@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
         <link rel="icon" href="images/favicon.ico"> <!--tab icon-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--importing jquery library-->
     </head>
 
     <body style="overflow-x:hidden" onload="loaded()"> <!--no horizontal scroll-->
@@ -24,14 +25,24 @@
             <!--need here so it is on the background instead of above it-->
             <div class="navbar">
                 <ul style="list-style:none">
-                    <a href="#home" target="_self">HOME</a>
-                    <a href="#about" target="_self">ABOUT</a>
-                    <a href="#projects" target="_self">PROJECTS</a>
-                    <a href="#contact" target="_self">CONTACT</a>
+                    <div class="homeLink">
+                        <a href="#home" target="_self">HOME</a>
+                    </div>
+                    <div class="aboutLink">
+                        <a href="#about" target="_self">ABOUT</a>
+                    </div>
+                    <div class="projectsLink">
+                        <a href="#projects" target="_self">PROJECTS</a>
+                    </div>
+                    <div class="contactLink">
+                        <a href="#contact" target="_self">CONTACT</a>
+                    </div>
                 </ul>
             </div>
             <div class="resume">
-                <a href="resume/index.html" target="_blank" id="resume-link">RESUME</a>
+                <div class="resumeLink">
+                    <a href="resume/index.html" target="_blank" id="resume-link">RESUME</a>
+                </div>
             </div>
             
             <div class="image-credit">
@@ -70,45 +81,46 @@
                     <img src="mypicture.png" alt="A photograph of me at Universal Studios LA in February 2020">
                 </div>-->
                 <div class="introduction">
-                    <h1 class="intro-header">
+                    <h1 class="intro-header fall-in">
                         Allow me to introduce myself.
                     </h1>
-                    <p>Hello, my name is Connor Gawley. I am a 19 year old student at the University of Victoria studying Computer Science. I have been fascinated with technology ever since I got my first iPod Touch back in the second grade. I was always curious as to how I was able to use a singular machine to play games, watch movies, and talk to friends, no matter where I was. Shortly after getting my iPod, my parents got me my first gaming console, the Nintendo Gameboy, and to say this sparked a new curiosity is an understatement. I was blown away that a tiny plastic rectangle with a mini TV could allow me to play a game for hours on end. On top of that, just taking out the tiny game card and swapping to a different one gave me an entirely new game.</p>
-                    <p>Fast-forward ten years to when I was 17, just gradutating high school, and still just as curious as I was when I was a child. It was at this point that I decided I wanted to make a career out of the passion I had been feeding for over half my life. I saved up as much money as I could working part-time during the school year and full time during the summer until I finally had enough to build my own PC. I spent months researching the best parts, looking for great deals, and collecting the perfect parts to make myself the perfect computer for coding and gaming. When I got it all set up, I immediately went to Google to start to learn to code, which was when I discovered SoloLearn, a website for complete beginners to learn the art of programming. I worked through the Python course, while building some (admittedly bad) projects.</p>
-                    <p>I started studying at the University of Victoria during the fall of 2020, right in the swing of COVID19. While it wasn't exactly what I expected for my first year of university, I still had a great time learning more about Python and Java while refining my problem-solving skills. During the first semester, I made my first larger Python project, and that was a command line 'Craps' game. While building this project, I accounted for many different types of bets, a chip counter to keep track of the player's total chips (although their total reset every time the program was run), and TONS of output to make the player really feel like part of the game. If I were to go back and make the project again, I would definitely spend some time making a Graphical User Interface, but I still think playing in the command line is very fun.</p>
-                    <p>So far in my second year I have been having a lot of fun. I have really enjoyed being in Victoria and being able to explore the campus and the city. Even the ten minute walk between classes is a great way to refresh my mind after a lecture or a lab. My classes this year have been a lot more challenging than the previous year, mostly because it has involved a lot of theory and math. While I like math, I sometimes find it difficult to fully grasp some concepts, especially the more abstract ones. I have also had the chance to explore new technologies this year, including HTML, CSS, JavaScript and C. These technologies have been so much fun to learn because they really opened my eyes to entirely new methods of programming. For example, HTML and CSS are written completely differently than Python and Java, and they hold the power to precisely change what the user sees when looking at the final version of the project. It was a little bit awkward at first to debug HTML and CSS code because it rarely actually tells the programmer if somethiong goes wrong, but instead it will simply not update any new changes since the bug. But once I familiarized myself with the Chrome Developer Tools, this became a lot more manageable. I decided to create a website and resume for myself using HTML and CSS, which I could use to introduce myself to potential employers. C, on the other hand, was a completely different beast. Because it is such a low-level language, I got the opportunity to immerse myself in pointers. It was challenging at first to grasp the entire idea of pointers since it is so different than most other programming concepts, but once I got it I came to appreciate the beauty of using memory locations rather than memory data. During my 'Software Engineering Methods (SENG265)' course, we were given the assingment of creating a C program to parse and condense data from an XML file into a more readable output, and then using that data to narrow the output to a specific region of time. Also during this course I got my first opportunity to use Git, which I now feel confident using for all of my projects.</p>
+                    <p class="from-left fall-in">Hello, my name is Connor Gawley. I am a 19 year old student at the University of Victoria studying Computer Science. I have been fascinated with technology ever since I got my first iPod Touch back in the second grade. I was always curious as to how I was able to use a singular machine to play games, watch movies, and talk to friends, no matter where I was. Shortly after getting my iPod, my parents got me my first gaming console, the Nintendo Gameboy, and to say this sparked a new curiosity is an understatement. I was blown away that a tiny plastic rectangle with a mini TV could allow me to play a game for hours on end. On top of that, just taking out the tiny game card and swapping to a different one gave me an entirely new game.<br><br><br></p>
+                    <p class="from-right fall-in">Fast-forward ten years to when I was 17, just gradutating high school, and still just as curious as I was when I was a child. It was at this point that I built my first PC. When I got it all set up, I immediately went to Google to start to learn to code, which was when I discovered SoloLearn, a website for complete beginners to learn the art of programming. I worked through the Python course, while building some (admittedly bad) projects.<br><br><br></p>
+                    <p class="from-left fall-in">I started studying at the University of Victoria during the fall of 2020, right in the swing of COVID19. While it wasn't exactly what I expected for my first year of university, I still had a great time learning more about Python and Java while refining my problem-solving skills. During the first semester, I made my first larger Python project, and that was a command line 'Craps' game. While building this project, I accounted for many different types of bets, a chip counter to keep track of the player's total chips (although their total reset every time the program was run), and TONS of output to make the player really feel like part of the game. If I were to go back and make the project again, I would definitely spend some time making a Graphical User Interface, but I still think playing in the command line is very fun.<br><br><br></p>
+                    <p class="from-right fall-in">So far in my second year I have been having a lot of fun. I have really enjoyed being in Victoria and being able to explore the campus and the city. Even the ten minute walk between classes is a great way to refresh my mind after a lecture or a lab. I have had the opportunity to use new technologies this year, including HTML, CSS, JavaScript and C. These technologies have been so much fun to learn because they really opened my eyes to entirely new methods of programming. For example, HTML and CSS are written completely differently than Python and Java, and they hold the power to precisely change what the user sees when looking at the final version of the project. It was a little bit awkward at first to debug HTML and CSS code, but with the Chrome Developer Tools, this became a lot more manageable. I decided to create a website and resume for myself using HTML, CSS, and JavaScript which I could use to introduce myself to potential employers.<br><br><br></p>
+                    <p class="from-left fall-in">C, on the other hand, was a completely different beast. Because it is such a low-level language, I got the opportunity to immerse myself in pointers. It was challenging at first to grasp the entire idea of pointers since it is so different than most other programming concepts, but once I got it I came to appreciate the beauty of using memory locations rather than memory data. During my 'Software Engineering Methods (SENG265)' course, we were given the assingment of creating a C program to parse and condense data from an XML file into a more readable output, and then using that data to narrow the output to only show a specific section. Also during this course I got my first opportunity to use Git, which I now feel confident using for all of my projects.<br><br><br></p>
                 </div>
-                <div class="recent-technologies">
+                <div class="recent-technologies fall-in">
                     <p>Although my favourite language to program with is still Python, I have been working with the following technologies recently:</p>
-                    <ul>
-                        <li>C</li>
-                        <li>HTML/CSS</li>
-                        <li>JavaScript</li>
-                        <li>Linux</li>
-                        <li>Vim</li>
-                        <li>Git</li>
-                        <li>Java</li>
-                        <li>Python</li>
+                    <ul id="technologies-list">
+                        <li class="fall-in">C</li>
+                        <li class="fall-in">HTML/CSS</li>
+                        <li class="fall-in">JavaScript</li>
+                        <li class="fall-in">Linux</li>
+                        <li class="fall-in">Vim</li>
+                        <li class="fall-in">Git</li>
+                        <li class="fall-in">Java</li>
+                        <li class="fall-in">Python</li>
                     </ul>
                 </div>
-                <div class="work-statement">
-                    <p>I am currently seeking a co-op or internship position for the summer of 2022. If you think I might be a good fit, please don't hesitate to reach me by email at <b><i>connorgawley@uvic.ca</i></b>, or fill out my contact form at the bottom of this page.</p>
+                <div class="work-statement fall-in">
+                    <p><br><br><br>I am currently seeking a co-op or internship position for the summer of 2022. If you think I might be a good fit, please don't hesitate to reach me by email at <b><i>connorgawley@uvic.ca</i></b>, or fill out my contact form at the bottom of this page.</p>
                 </div>
             </div>
         </div>
 <!------------------------------------------------------------------------------------------------------------------------>        
         
-<span class="hr"></span>
+<span class="hr fall-in"></span>
 
 <!------------------------------------------------------------------------------------------------------------------------>        
         <div id="projects">
             <!--projects section, directly under the about section-->
             <div class="projects-content">
-                <h1 class="projects-header">
+                <h1 class="projects-header fall-in">
                     Let's take a look at what I've been working on.
                 </h1>
-                <div class="website">
-                    <div class="text">
+                <div class="website fall-in">
+                    <div class="text left">
                         <p class="title">
                             Personal Website
                         </p>
@@ -122,13 +134,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="calendar-python">
+                <div class="calendar-python fall-in">
                     <div class="thumbnail">
                         <a href="https://github.com/gawlster/" target="_blank">
                             <img src="images/c-calendar-thumbnail.JPG">
                         </a>
                     </div>
-                    <div class="text">
+                    <div class="text right">
                         <p class="title">
                             Python Event Interpreter
                         </p>
@@ -137,8 +149,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="shooter">
-                    <div class="text">
+                <div class="shooter fall-in">
+                    <div class="text left">
                         <p class="title">
                             Top-down Shooter Game
                         </p>
@@ -152,13 +164,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="calendar-c">
+                <div class="calendar-c fall-in">
                     <div class="thumbnail">
                         <a href="https://github.com/gawlster/calendar-interpreter" target="_blank">
                             <img src="images/c-calendar-thumbnail.JPG">
                         </a>
                     </div>
-                    <div class="text">
+                    <div class="text right">
                         <p class="title">
                             C Calender Interpreter
                         </p>
@@ -168,7 +180,7 @@
                     </div>
                     
                 </div>
-                <div class="other-projects-div">
+                <div class="other-projects-div fall-in">
                     <a href="https://github.com/gawlster?tab=repositories" target="_blank">
                         <div class="other-projects">
                             <div class="other-text">
@@ -183,7 +195,7 @@
         </div>
 <!------------------------------------------------------------------------------------------------------------------------>
 
-<span class="hr"></span>
+<span class="hr fall-in"></span>
 
 <!------------------------------------------------------------------------------------------------------------------------>
         <div id="contact">

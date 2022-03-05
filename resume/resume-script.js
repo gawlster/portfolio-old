@@ -4,9 +4,9 @@ function delay(time) {
 
 function loaded() {
     disableScroll();
-    let loader = document.getElementById("preloader");
-    let loader_outer = document.getElementById("preloader-outer");
-    let resume = document.getElementsByClassName("resume");
+    let loader = $("#preloader");
+    let loader_outer = $("#preloader-outer");
+    let resume = $(".resume");
     window.scrollTo(0,0);
     delay(1000).then(() => loaded_done(loader, loader_outer, resume));
 }
@@ -15,7 +15,7 @@ function loaded_done(loader, loader_outer, resume) {
     removeFadeOut(loader_outer, 2000);
     //loader.style.display = "none";
     delay(700).then(() => enableScroll());
-    delay(2100).then(() => loader_outer.style.display = "none");
+    delay(2100).then(() => loader_outer.css("display", "none"));
 }
 
 
@@ -29,11 +29,9 @@ function loaded_done(loader, loader_outer, resume) {
 
 function removeFadeOut( el, speed ) {
     var seconds = speed/1000;
-    el.style.transition = "opacity "+seconds+"s ease";
-    el.style.opacity = 0;
-    setTimeout(function() {
-        el.parentNode.removeChild(el);
-    }, speed);
+    let opacityStatement = "opacity "+seconds+"s ease"
+    el.css("transition", opacityStatement);
+    el.css("opacity", "0");
 }
 
 
@@ -42,22 +40,20 @@ function removeFadeOut( el, speed ) {
 
 
 
+/*------------------For the preloader fade out transition------------------*/
 
 // left: 37, up: 38, right: 39, down: 40,
 // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
 function preventDefault(e) {
   e.preventDefault();
 }
-
 function preventDefaultForScrollKeys(e) {
   if (keys[e.keyCode]) {
     preventDefault(e);
     return false;
   }
 }
-
 // modern Chrome requires { passive: false } when adding event
 var supportsPassive = false;
 try {
@@ -65,10 +61,8 @@ try {
     get: function () { supportsPassive = true; } 
   }));
 } catch(e) {}
-
 var wheelOpt = supportsPassive ? { passive: false } : false;
 var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
 // call this to Disable
 function disableScroll() {
   window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
@@ -76,7 +70,6 @@ function disableScroll() {
   window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
   window.addEventListener('keydown', preventDefaultForScrollKeys, false);
 }
-
 // call this to Enable
 function enableScroll() {
   window.removeEventListener('DOMMouseScroll', preventDefault, false);
