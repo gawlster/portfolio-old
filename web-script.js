@@ -18,37 +18,69 @@ window.addEventListener("scroll", function() {
 //interests
 $(function() {
   $('.my-interests').hover(function() {
-    $('.interests').css('display', 'initial');
-    $('.work-experience').css('display', 'none');
-    $('.technical-background').css('display', 'none');
-    $('.skills').css('display', 'none');
+    $('.interests').css('opacity', '1');
+    $('.interests').css('position', 'relative');
+    $('.my-interests').css('background-color', 'rgba(75, 75, 75, 0.5)');
+    $('.work-experience').css('opacity', '0');
+    $('.work-experience').css('position', 'absolute');
+    $('.my-work-experience').css('background-color', 'transparent');
+    $('.technical-background').css('opacity', '0');
+    $('.technical-background').css('position', 'absolute');
+    $('.my-technical-background').css('background-color', 'transparent');
+    $('.skills').css('opacity', '0');
+    $('.skills').css('position', 'absolute');
+    $('.my-skills').css('background-color', 'transparent');
     $('.initial-space').css('display', 'none');
   })});
 //work experience
 $(function() {
   $('.my-work-experience').hover(function() {
-    $('.interests').css('display', 'none');
-    $('.work-experience').css('display', 'initial');
-    $('.technical-background').css('display', 'none');
-    $('.skills').css('display', 'none');
+    $('.interests').css('opacity', '0');
+    $('.interests').css('position', 'absolute');
+    $('.my-interests').css('background-color', 'transparent');
+    $('.work-experience').css('opacity', '1');
+    $('.work-experience').css('position', 'relative');
+    $('.my-work-experience').css('background-color', 'rgba(75, 75, 75, 0.5)');
+    $('.technical-background').css('opacity', '0');
+    $('.technical-background').css('position', 'absolute');
+    $('.my-technical-background').css('background-color', 'transparent');
+    $('.skills').css('opacity', '0');
+    $('.skills').css('position', 'absolute');
+    $('.my-skills').css('background-color', 'transparent');
     $('.initial-space').css('display', 'none');
   })});
  //technical background
 $(function() {
   $('.my-technical-background').hover(function() {
-    $('.interests').css('display', 'none');
-    $('.work-experience').css('display', 'none');
-    $('.technical-background').css('display', 'initial');
-    $('.skills').css('display', 'none');
+    $('.interests').css('opacity', '0');
+    $('.interests').css('position', 'absolute');
+    $('.my-interests').css('background-color', 'transparent');
+    $('.work-experience').css('opacity', '0');
+    $('.work-experience').css('position', 'absolute');
+    $('.my-work-experience').css('background-color', 'transparent');
+    $('.technical-background').css('opacity', '1');
+    $('.technical-background').css('position', 'relative');
+    $('.my-technical-background').css('background-color', 'rgba(75, 75, 75, 0.5)');
+    $('.skills').css('opacity', '0');
+    $('.skills').css('position', 'absolute');
+    $('.my-skills').css('background-color', 'transparent');
     $('.initial-space').css('display', 'none');
   })});
 //skills
 $(function() {
   $('.my-skills').hover(function() {
-    $('.interests').css('display', 'none');
-    $('.work-experience').css('display', 'none');
-    $('.technical-background').css('display', 'none');
-    $('.skills').css('display', 'initial');
+    $('.interests').css('opacity', '0');
+    $('.interests').css('position', 'absolute');
+    $('.my-interests').css('background-color', 'transparent');
+    $('.work-experience').css('opacity', '0');
+    $('.work-experience').css('position', 'absolute');
+    $('.my-work-experience').css('background-color', 'transparent');
+    $('.technical-background').css('opacity', '0');
+    $('.technical-background').css('position', 'absolute');
+    $('.my-technical-background').css('background-color', 'transparent');
+    $('.skills').css('opacity', '1');
+    $('.skills').css('position', 'relative');
+    $('.my-skills').css('background-color', 'rgba(75, 75, 75, 0.5)');
     $('.initial-space').css('display', 'none');
   })});
 
@@ -188,6 +220,7 @@ function enableScroll() {
 const faders = document.querySelectorAll(".fade-in");
 const sliders = document.querySelectorAll(".slide-in");
 const fallers = document.querySelectorAll(".fall-in");
+let alreadyShown = false;
 
 const appearOptions = {
   threshold:0,
@@ -214,10 +247,16 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 
 const slideOnScroll = new IntersectionObserver(function(entries, slideOnScroll) {
   entries.forEach(entry => {
+    if (alreadyShown) {
+      console.log("delaying");
+      delay(7500);
+    }
     if (!entry.isIntersecting) {
       entry.target.classList.remove('appear');
     } else {
+      console.log("not delaying");
       entry.target.classList.add('appear');
+      alreadyShown = true;
     }
   });
 }, slideOptions);
