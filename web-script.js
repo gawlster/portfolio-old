@@ -15,8 +15,75 @@ window.addEventListener("scroll", function() {
         resumeLink.css("border-width", "2px");
     }
 });
+//interests
+$(function() {
+  $('.my-interests').hover(function() {
+    $('.interests').css('display', 'initial');
+    $('.work-experience').css('display', 'none');
+    $('.technical-background').css('display', 'none');
+    $('.skills').css('display', 'none');
+    $('.initial-space').css('display', 'none');
+  })});
+//work experience
+$(function() {
+  $('.my-work-experience').hover(function() {
+    $('.interests').css('display', 'none');
+    $('.work-experience').css('display', 'initial');
+    $('.technical-background').css('display', 'none');
+    $('.skills').css('display', 'none');
+    $('.initial-space').css('display', 'none');
+  })});
+ //technical background
+$(function() {
+  $('.my-technical-background').hover(function() {
+    $('.interests').css('display', 'none');
+    $('.work-experience').css('display', 'none');
+    $('.technical-background').css('display', 'initial');
+    $('.skills').css('display', 'none');
+    $('.initial-space').css('display', 'none');
+  })});
+//skills
+$(function() {
+  $('.my-skills').hover(function() {
+    $('.interests').css('display', 'none');
+    $('.work-experience').css('display', 'none');
+    $('.technical-background').css('display', 'none');
+    $('.skills').css('display', 'initial');
+    $('.initial-space').css('display', 'none');
+  })});
 
-/* going to redo this without formsubmit.com
+
+
+  /*
+//work experience
+$(function() {
+  $('.my-work-experience').hover(function() {
+    $('.work-experience').css('display', 'initial');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('.work-experience').css('display', 'none');
+  });
+});
+//techincal background
+$(function() {
+  $('.my-technical-background').hover(function() {
+    $('.technical-background').css('display', 'initial');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('.technical-background').css('display', 'none');
+  });
+});
+//skills
+$(function() {
+  $('.my-skills').hover(function() {
+    $('.skills').css('display', 'initial');
+  }, function() {
+    // on mouseout, reset the background colour
+    $('.skills').css('display', 'none');
+  });
+});
+
+going to redo this without formsubmit.com
 function contactFormSubmit() {
     //next couple lines to get the values from the input boxes
     // if any of them are empty, dont display the thank you alert
@@ -172,7 +239,7 @@ faders.forEach(fader => {
 });
 sliders.forEach(slider => {
   slideOnScroll.observe(slider);
-})
+});
 fallers.forEach(faller => {
   fallOnScroll.observe(faller);
-})
+});

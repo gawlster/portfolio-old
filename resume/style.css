@@ -37,6 +37,7 @@ body {
     background-image:url('beach-background.png');
     background-repeat:no-repeat;
     background-attachment:fixed;
+    background-size: cover;
 }
 .image-credit {
     font-family: 'Lato', sans-serif;

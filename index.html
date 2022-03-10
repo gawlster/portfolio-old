@@ -80,21 +80,30 @@
                 <!--<div class="self-photo">
                     <img src="mypicture.png" alt="A photograph of me at Universal Studios LA in February 2020">
                 </div>-->
-                <div class="introduction">
-                    <h1 class="intro-header fall-in">
+                <div class="introduction fall-in">
+                    <h1 class="intro-header">
                         Allow me to introduce myself.
                     </h1>
-                    <p class="from-left fall-in">Hello, my name is Connor Gawley. I am a 19 year old student at the University of Victoria studying Computer Science.</p>
+                    <p class="short-intro">Hello, my name is Connor Gawley. I am a 19 year old student at the University of Victoria studying Computer Science. Learn more about me by hovering over the following sub-sections.</p>
                 </div>
+                <div class="to-hover-titles fall-in">
+                    <ul>
+                        <li class="my-interests">My Interests</li>
+                        <li class="my-work-experience">My Work Experience</li>
+                        <li class="my-technical-background">My Technical Background</li>
+                        <li class="my-skills">My Skills</li>
+                    </ul>
+                </div>
+                <div class="initial-space"></div>
                 <div class="about-me">
-                    <div class="interests"> <!--add pictures and such-->
+                    <div class="interests sub-category fall-in"> <!--add pictures and such-->
                         <h3 class="sub-header">HOCKEY</h3>
                         <p>In my free time while I'm not coding, my favorite thing to do is play hockey. I have played since I was 4 years old, and still love it to this day. I played Tier 1 hockey in Calgary growing up, and now I play Juvenile hockey in Victoria to keep me busy. I also play summer hockey twice a week in Calgary with some friends.</p>
                         <p>In addition, I was a referee for 5 years from 2015 to 2020. I really enjoyed the extra opportunity to get on the ice and I loved seeing the younger players grow and improve like I did at their age.</p>
                         <h3 class="sub-header">VIDEO GAMES</h3>
                         <p>When I'm not playing hockey, I love to play video games. I think it is a great way to catch up with friends, and just have a great time. Recently I have been playing a lot of Apex Legends and Brawlhalla.</p>
                     </div>
-                    <div class="work-experience">
+                    <div class="work-experience sub-category fall-in">
                         <h3 class="sub-header">CASHIER</h3>
                         <p class="work-details">LIQUOR EXPRESS | 2021-current</p>
                         <ul>
@@ -118,28 +127,43 @@
                             <li>Worked efficiently with a POS System to ensure customers were helped in a timely manner.</li>
                         </ul>
                     </div>
-                    <div class="technical-background">
-                        <p>I have been fascinated with technology ever since I got my first iPod Touch back in the second grade. I was always curious as to how I was able to use a singular machine to play games, watch movies, and talk to friends, no matter where I was. Shortly after getting my iPod, my parents got me my first gaming console, the Nintendo Gameboy, and to say this sparked a new curiosity is an understatement. I was blown away that a tiny plastic rectangle with a mini TV could allow me to play a game for hours on end. On top of that, just taking out the tiny game card and swapping to a different one gave me an entirely new game.</p>
-                        <p class="from-right fall-in">Fast-forward ten years to when I was 17, just gradutating high school, and still just as curious as I was when I was a child. It was at this point that I built my first PC. When I got it all set up, I immediately went to Google to start to learn to code, which was when I discovered SoloLearn, a website for complete beginners to learn the art of programming. I worked through the Python course, while building some (admittedly bad) projects.</p>
-                        <p class="from-left fall-in">I started studying at the University of Victoria during the fall of 2020, right in the swing of COVID19. While it wasn't exactly what I expected for my first year of university, I still had a great time learning more about Python and Java while refining my problem-solving skills. During the first semester, I made my first larger Python project, and that was a command line 'Craps' game. While building this project, I accounted for many different types of bets, a chip counter to keep track of the player's total chips (although their total reset every time the program was run), and TONS of output to make the player really feel like part of the game. If I were to go back and make the project again, I would definitely spend some time making a Graphical User Interface, but I still think playing in the command line is very fun.</p>
-                        <p class="from-right fall-in">So far in my second year I have been having a lot of fun. I have really enjoyed being in Victoria and being able to explore the campus and the city. Even the ten minute walk between classes is a great way to refresh my mind after a lecture or a lab. I have had the opportunity to use new technologies this year, including HTML, CSS, JavaScript and C. These technologies have been so much fun to learn because they really opened my eyes to entirely new methods of programming. For example, HTML and CSS are written completely differently than Python and Java, and they hold the power to precisely change what the user sees when looking at the final version of the project. It was a little bit awkward at first to debug HTML and CSS code, but with the Chrome Developer Tools, this became a lot more manageable. I decided to create a website and resume for myself using HTML, CSS, and JavaScript which I could use to introduce myself to potential employers.</p>
-                        <p class="from-left fall-in">C, on the other hand, was a completely different beast. Because it is such a low-level language, I got the opportunity to immerse myself in pointers. It was challenging at first to grasp the entire idea of pointers since it is so different than most other programming concepts, but once I got it I came to appreciate the beauty of using memory locations rather than memory data. During my 'Software Engineering Methods (SENG265)' course, we were given the assingment of creating a C program to parse and condense data from an XML file into a more readable output, and then using that data to narrow the output to only show a specific section. Also during this course I got my first opportunity to use Git, which I now feel confident using for all of my projects.</p>
+                    <div class="technical-background sub-category">
+                        <p>I have been fascinated with technology ever since I got my first iPod Touch back in the second grade. I was always curious as to how I was able to use a singular machine to play games, watch movies, and talk to friends, wherever I was.</p>
+                        <p>Fast-forward ten years to when I was 17, just gradutating high school, and still just as curious as I was when I was a child. It was at this point that I built my first PC. When I got it all set up, I immediately went to Google to start to learn to code, primarily using SoloLearn beginner courses. I worked through the Python course, while building some (admittedly bad) projects.</p>
+                        <p>I started studying at the University of Victoria during the fall of 2020, right in the swing of COVID19. While it wasn't exactly what I expected for my first year of university, I still had a great time learning more about Python and Java while refining my problem-solving skills. During the first semester, I made my first larger project using Python, that was a Craps game simulator played in the command line.</p>
+                        <p>So far in my second year I have been having a lot of fun. I have really enjoyed being in Victoria and being able to explore the campus and the city. Even the ten minute walk between classes is a great way to refresh my mind after a lecture or a lab. I have had the opportunity to use new technologies this year, including HTML, CSS, JavaScript and C. These technologies have been so much fun to learn because they really opened my eyes to entirely new methods of programming. For example, HTML and CSS are written completely differently than Python and Java, and they hold the power to precisely change what the user sees when looking at the final version of the project.</p>
+                        <p>C, on the other hand, was a completely different beast. Because it is such a low-level language, I got the opportunity to immerse myself in pointers. It was challenging at first but once I got it I came to appreciate the beauty of using memory locations rather than memory data. I also got my first opportunity to really learn Git, rather than just upload files after the project was finished. I am now comfortable working on projects on both my laptop and desktop, and reverting back to older versions if I decide I don't like any changes I've made.</p>
                     </div>
-                    <div class="recent-technologies fall-in">
-                        <p>Although my favourite language to program with is still Python, I have been working with the following technologies recently:</p>
-                        <ul id="technologies-list">
-                            <li class="fall-in">C</li>
-                            <li class="fall-in">HTML/CSS</li>
-                            <li class="fall-in">JavaScript</li>
-                            <li class="fall-in">Linux</li>
-                            <li class="fall-in">Vim</li>
-                            <li class="fall-in">Git</li>
-                            <li class="fall-in">Java</li>
-                            <li class="fall-in">Python</li>
-                        </ul>
+                    <div class="skills sub-category">
+                        <div class="technical-skills">
+                            <p>Although my favourite language to program with is still Python, I have been working with the following technologies recently:</p>
+                            <ul id="skills-list">
+                                <li>C</li>
+                                <li>HTML/CSS</li>
+                                <li>JavaScript</li>
+                                <li>Linux</li>
+                                <li>Vim</li>
+                                <li>Git</li>
+                                <li>Java</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                        <div class="non-technical-skills">
+                            <p>Through my past jobs, my hockey career, and working as part of a team for school projects, I have gained many valuable skills, notably:</p>
+                            <ul id="skills-list">
+                                <li>Time management</li>
+                                <li>Attention to detail</li>
+                                <li>Positive attitude</li>
+                                <li>Team player</li>
+                                <li>Problem-solving skills</li>
+                                <li>Excellent communication</li>
+                                <li>Creative thinking</li>
+                                <li>Great organizational skills</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="work-statement fall-in">
-                        <p><br><br><br>I am currently seeking a co-op or internship position for the summer of 2022. If you think I might be a good fit, please don't hesitate to reach me by email at <b><i>connorgawley@uvic.ca</i></b>, or fill out my contact form at the bottom of this page.</p>
+                        <p>I am currently seeking a co-op or internship position for the summer of 2022. If you think I might be a good fit, please don't hesitate to reach me by email at <b><i>connorgawley@uvic.ca</i></b>, or fill out my contact form at the bottom of this page.</p>
                     </div>
                 </div>
             </div>
@@ -236,7 +260,7 @@
 <!------------------------------------------------------------------------------------------------------------------------>
         <div id="contact">
             <!--contact section, directly under the projects section-->
-            <div class="contact-content">
+            <div class="contact-content fall-in">
                 <h1 class="contact-header">
                     Get in touch!
                 </h1>
