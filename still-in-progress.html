@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="construction.css">
+    <script src="construction.js"></script>
+    <title>Under Construction</title>
+</head>
+<body>
+    <div class="container">
+        <h1>The project you are trying to view is still under construction. If you would like to see the work in progress, please contact me using the form below. Otherwise, I hope to have it completed soon!</h1>
+        <form action="https://formsubmit.co/connorgawley@uvic.ca" method="POST">
+            <label for="firstName">First Name:</label>
+            <input id="firstName" type="text" placeholder="ex. John" maxlength="25" size="30" name="name" required>
+            
+            <label for="lastName">Last Name:</label>
+            <input id="lastName" type="text" placeholder="ex. Smith" maxlength="25" size="30" name="lname" required>
+            
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="ex. johnsmith@example.com" size="40" name="email" required>
+            
+            <label id="textarea-label" for="message">Write your message here (please include the project you would like to see):</label>
+            <textarea id="message" name="message" cols="50" rows="8"></textarea>
+            
+            <button onclick="contactFormSubmit()">Send</button>
+            
+            <input type="hidden" name="_next" value="http://webhome.csc.uvic.ca/~connorgawley/website/thank-you.html">
+        </form>
+    </div>
+</body>
+</html>

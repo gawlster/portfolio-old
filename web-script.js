@@ -114,8 +114,8 @@ $(function() {
     $('.skills').css('display', 'none');
   });
 });
+*/
 
-going to redo this without formsubmit.com
 function contactFormSubmit() {
     //next couple lines to get the values from the input boxes
     // if any of them are empty, dont display the thank you alert
@@ -123,15 +123,11 @@ function contactFormSubmit() {
     let last_name = $("#lastName").value;
     let email = $("#email").value;
     
-    console.log(firstname + lastName + email);
-    
-    
     if (first_name.length != 0 && last_name.length != 0 && email.length != 0 && ("@" in email)) {
         let alert_message = "Thank you, " + first_name + " for submitting! I will get back to you as soon as possible. In the meantime, you will be redirected to my form's host server for human verification."
         alert(alert_message);
     }
 }
-*/
 
 /*preloader*/
 function loaded() {
@@ -247,16 +243,12 @@ const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll
 
 const slideOnScroll = new IntersectionObserver(function(entries, slideOnScroll) {
   entries.forEach(entry => {
-    if (alreadyShown) {
-      console.log("delaying");
-      delay(7500);
-    }
+    console.log("slideOnScroll()");
+    delay(7500);
     if (!entry.isIntersecting) {
       entry.target.classList.remove('appear');
     } else {
-      console.log("not delaying");
       entry.target.classList.add('appear');
-      alreadyShown = true;
     }
   });
 }, slideOptions);
@@ -281,4 +273,19 @@ sliders.forEach(slider => {
 });
 fallers.forEach(faller => {
   fallOnScroll.observe(faller);
+});
+
+
+const portfolioCard = document.querySelector('.portfolio');
+const routeCard = document.querySelector('.route');
+const cocktailCard = document.querySelector('.cocktail');
+
+portfolioCard.addEventListener("click", e => {
+  window.open('http://webhome.csc.uvic.ca/~connorgawley/website', '_blank');
+});
+routeCard.addEventListener("click", e => {
+  window.open('/still-in-progress.html', '_blank');
+});
+cocktailCard.addEventListener("click", e => {
+  window.open('http://webhome.csc.uvic.ca/~connorgawley/project2', '_blank');
 });
