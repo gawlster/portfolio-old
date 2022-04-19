@@ -281,7 +281,7 @@ const routeCard = document.querySelector('.route');
 const cocktailCard = document.querySelector('.cocktail');
 
 portfolioCard.addEventListener("click", e => {
-  window.open('http://webhome.csc.uvic.ca/~connorgawley/website', '_blank');
+  window.open('http://webhome.csc.uvic.ca/~connorgawley/home', '_blank');
 });
 routeCard.addEventListener("click", e => {
   window.open('/still-in-progress.html', '_blank');
