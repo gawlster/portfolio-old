@@ -284,7 +284,7 @@ portfolioCard.addEventListener("click", e => {
   window.open('./', '_blank');
 });
 routeCard.addEventListener("click", e => {
-  window.open('./website/still-in-progress.html', '_blank');
+  window.open('./still-in-progress.html', '_blank');
 });
 cocktailCard.addEventListener("click", e => {
   window.open('http://webhome.csc.uvic.ca/~connorgawley/project2', '_blank');
