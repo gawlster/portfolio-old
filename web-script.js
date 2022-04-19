@@ -2,6 +2,12 @@ function delay(time) {
   return new Promise(resolve => setTimeout(resolve, time));
 }
 
+// window.onload = function() {
+//   $('.interests').css('opacity', '1');
+//   $('.interests').css('position', 'relative');
+//   $('.my-interests').css('background-color', 'rgba(75, 75, 75, 0.5)');
+// }
+
 /* make the navbar opaque when scrolled past homescreen image */
 window.addEventListener("scroll", function() {
     let scroll = this.scrollY;
@@ -154,6 +160,10 @@ function loaded_done(loader, loader_outer) {
     delay(700).then(() => enableScroll());
     //delay(200).then(() => fadeContentIn(navbar, name, position, socials));
     delay(2100).then(() => loader_outer.css("display", "none"));
+    
+    $('.interests').css('opacity', '1');
+    $('.interests').css('position', 'relative');
+    $('.my-interests').css('background-color', 'rgba(75, 75, 75, 0.5)');
 }
 function fadeContentIn(navbar, name, position, socials) {
   
