@@ -1,4 +1,4 @@
-# website
+# Portfolio
 A personal website with my portfolio to be submitted with any job applications.
 
 ## What is the project?
